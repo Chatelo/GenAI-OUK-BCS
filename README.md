@@ -14,5 +14,5 @@ This repository contains projects and materials from the "Generative AI Training
 
 ---
 
-*See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on updating this README.*</content>
+*See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on updating [this README](README.md).*</content>
 <parameter name="filePath">/home/chatelo/GenAI-AI-Work/submit/README.md
