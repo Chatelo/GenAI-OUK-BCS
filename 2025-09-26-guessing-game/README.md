@@ -6,8 +6,13 @@ Fixed a hint inversion where the "Too high" and "Too low" responses were swapped
 #Step6
 
 ## Setup Instructions
-4. Got a Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-5. Added your API key to `.env`: `GEMINI_API_KEY=api-key-here`
-6. Run the game: `jac run guess_game6.jac`
+1. Got a Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Added your API key to `.env`: `GEMINI_API_KEY=api-key-here` or run in your terminal:
+`GEMINI_API_KEY=api-key-here`
+
+3. Run the game: `jac run guess_game6.jac` or in my case(in root repo of this project):
+`jac serve ./2025-09-26-guessing-game/guess_game6.jac`
+you should see results like this:
+
 
 The game uses MTP (Meaning-Typed Programming) from the paper, where the `by llm` operator automatically generates prompts based on function signatures and types, integrating LLM calls seamlessly without manual prompt engineering.
