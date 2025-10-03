@@ -5,9 +5,9 @@
 
 This repository contains projects and materials from the "Generative AI Training: Building Generative AI Applications" course offered by the [Open University of Kenya](https://ouk.ac.ke/) in conjunction with [BCS Technology](https://bcstechnology.com.au/) or [Jaseci Labs](https://www.jasecilabs.com/).
 
-## Project Chronology
+## Class Projects(Starting from the latest)
 
-### 🚀 Latest: [2. 2025-09-26-guessing-game](2025-09-26-guessing-game/)
+### [2. 2025-09-26-guessing-game](2025-09-26-guessing-game/) (🚀 Latest)
 - **Date:** September 26, 2025
 - **Description:** Implementation of a guessing game using Jac, incorporating LLM integration with Gemini API. Covers MTP (Meaning-Typed Programming) concepts and API key setup.
 
