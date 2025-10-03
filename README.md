@@ -1,8 +1,7 @@
-# Generative AI Training: Building Generative AI Applications
-
 [![jac](https://img.shields.io/badge/jaclang-0.8+-yellow.svg)](https://www.jac-lang.org/)
 [![UV](https://img.shields.io/badge/uv-0.8+-violet.svg)](https://docs.astral.sh/uv/getting-started/)
 [![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://python.org)
+# Generative AI Training: Building Generative AI Applications
 
 This repository contains projects and materials from the "Generative AI Training: Building Generative AI Applications" course offered by the [Open University of Kenya](https://ouk.ac.ke/) in conjunction with [BCS Technology](https://bcstechnology.com.au/) or [Jaseci Labs](https://www.jasecilabs.com/).
 
