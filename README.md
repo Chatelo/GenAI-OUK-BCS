@@ -1,5 +1,5 @@
-[![jac](https://img.shields.io/badge/jaclang-0.8+-yellow.svg)](https://www.jac-lang.org/)
-[![UV](https://img.shields.io/badge/uv-0.8+-violet.svg)](https://docs.astral.sh/uv/getting-started/)
+[![jac](https://img.shields.io/badge/Jaclang-0.8+-yellow.svg)](https://www.jac-lang.org/)
+[![UV](https://img.shields.io/badge/UV-0.8+-violet.svg)](https://docs.astral.sh/uv/getting-started/)
 [![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://python.org)
 # Generative AI Training: Building Generative AI Applications
 
