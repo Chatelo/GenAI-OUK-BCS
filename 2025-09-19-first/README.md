@@ -1,4 +1,6 @@
-
+[![jac](https://img.shields.io/badge/Jaclang-0.8+-yellow.svg)](https://www.jac-lang.org/)
+[![UV](https://img.shields.io/badge/UV-0.8+-violet.svg)](https://docs.astral.sh/uv/getting-started/)
+[![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://python.org)
 # Lecture 1 — Introduction (Prof. Jason Mar)
 
 Friday, 19 September 2025 — 5:00 PM
