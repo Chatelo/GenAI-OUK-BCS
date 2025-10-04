@@ -83,8 +83,3 @@ The `give_hint` function is automatically implemented by the LLM, which:
 
 ![Browser interface showing the guessing game walker APIs](images/browser-walker-apis.png)
 
-## Issues Fixed
-1. ✅ Corrected `.env` file to use `OPENAI_API_KEY` instead of `GEMINI_API_KEY`
-2. ✅ Removed extra leading spaces before `glob llm` and `with entry:__main__`
-3. ✅ Cleaned up commented-out code
-4. ✅ Verified syntax correctness and proper imports
