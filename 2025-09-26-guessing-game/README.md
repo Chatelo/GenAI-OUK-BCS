@@ -2,63 +2,73 @@
 [![UV](https://img.shields.io/badge/UV-0.8+-violet.svg)](https://docs.astral.sh/uv/getting-started/)
 [![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://python.org)
 
-# Step 5: Guess Game — Fix notes
+# 🎮 Guessing Game with AI Hints
 
-Fixed a hint inversion where the "Too high" and "Too low" responses were swapped; messages now match the comparison logic. Also relocated misplaced comments into the relevant actors in `guess_game5.jac` and `guess_game5.impl.jac`.
+A fun number-guessing game built with Jaclang, featuring AI-powered hints using OpenAI's GPT-4o model.
 
-## Testing Step 5
-To test the fixed hint logic:
+## 📋 Table of Contents
+
+- [Step 5: Bug Fixes](#step-5-bug-fixes)
+- [Step 6: AI Integration](#step-6-ai-integration)
+- [Screenshots](#screenshots)
+
+## 🐛 Step 5: Bug Fixes
+
+### Changes Made
+- Corrected hint inversion: "Too high" and "Too low" messages now align with comparison logic.
+- Moved misplaced comments to appropriate actors in `guess_game5.jac` and `guess_game5.impl.jac`.
+
+### Testing
+Run the fixed version:
 ```bash
 cd /home/chatelo/GenAI-AI-Work/submit
 uv run jac run 2025-09-26-guessing-game/guess_game5.jac
 ```
 
-**Expected Output:**
-- When guess < correct_number: "Too low!"
-- When guess > correct_number: "Too high!"
-- When guess == correct_number: "Congratulations! You guessed correctly."
+**Expected Behavior:**
+- Guess < correct number: "Too low!"
+- Guess > correct number: "Too high!"
+- Guess = correct number: "Congratulations! You guessed correctly."
 
-✅ **Status**: WORKING - All hints display correctly.
+## 🤖 Step 6: AI Integration
 
+Enhances the game with AI-generated hints using Jaclang's `by llm` operator and OpenAI's API.
 
-# Step 6: Adding AI support using `byllm` and OpenAI API
+### Setup
+1. Obtain an OpenAI API key from [OpenAI Platform](https://platform.openai.com/api-keys).
+   - Uses GPT-4o model.
+   - Note: Gemini provides free keys, but this project requires OpenAI.
 
-Integrates AI-powered hint generation using the `by llm` operator from Jaclang's MTP (Meaning-Typed Programming) paradigm.
+2. Configure your API key:
+   - Add to `.env`:
+     ```
+     OPENAI_API_KEY=your_actual_api_key_here
+     ```
+   - Or export in terminal:
+     ```bash
+     export OPENAI_API_KEY=your_actual_api_key_here
+     ```
 
-## Setup Instructions
-1. Get an OpenAI API key from [OpenAI Platform](https://platform.openai.com/api-keys)
-   - Note: The code uses `gpt-4o` model from OpenAI
-   - Gemini offers free keys for testing, but this project specifically uses OpenAI
-
-2. Add your API key to `.env` file:
-   ```
-   OPENAI_API_KEY=your_actual_api_key_here
-   ```
-   Or set it as an environment variable in your terminal:
+3. Launch the game:
    ```bash
-   export OPENAI_API_KEY=your_actual_api_key_here
-   ```
-
-3. Run the game:
-   ```bash
-   # From the repository root:
+   # Run locally
    cd /home/chatelo/GenAI-AI-Work/submit
    uv run jac run 2025-09-26-guessing-game/guess_game6.jac
    ```
-   
-   Or serve it as an API:
+
    ```bash
+   # Serve as API
    uv run jac serve 2025-09-26-guessing-game/guess_game6.jac
    ```
 
-## How It Works
+### How It Works
 
-The game uses **MTP (Meaning-Typed Programming)** where the `by llm` operator automatically:
-- Generates prompts based on function signatures and types
-- Integrates LLM calls seamlessly without manual prompt engineering
-- Returns fun, creative hints instead of static messages
+Leverages **Meaning-Typed Programming (MTP)** with the `by llm` operator for seamless LLM integration:
+- Automatically generates prompts from function signatures.
+- Eliminates manual prompt engineering.
+- Delivers dynamic, creative hints.
 
-### Key Code Elements:
+#### Core Code
 ```jac
 glob llm = Model(model_name="gpt-4o", verbose=False);
 
@@ -66,20 +76,16 @@ glob llm = Model(model_name="gpt-4o", verbose=False);
 def give_hint(guess: int, correct_number: int) -> str by llm();
 ```
 
-The `give_hint` function is automatically implemented by the LLM, which:
-- Receives the guess and correct_number as parameters
-- Generates creative, contextual hints
-- Returns them as strings to be displayed
+The `give_hint` function:
+- Takes guess and correct number as inputs.
+- Produces engaging, context-aware hints.
+- Outputs strings for display.
 
-✅ **Status**: WORKING - Code compiles and runs correctly. Requires valid OpenAI API key for full functionality.
+## 📸 Screenshots
 
-## Example Output
-
-**Terminal Output:**
-
+### Terminal Output
 ![Terminal output when serving the guessing game](images/terminal-serve.png)
 
-**Browser Interface:**
-
+### Browser Interface
 ![Browser interface showing the guessing game walker APIs](images/browser-walker-apis.png)
 
